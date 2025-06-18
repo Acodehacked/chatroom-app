@@ -1,7 +1,8 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+dotenv.config();
 const firebaseConfig = {
   apiKey: `${process.env.API_KEY}`,
   authDomain: `${process.env.AUTH_DOMAIN}`,
