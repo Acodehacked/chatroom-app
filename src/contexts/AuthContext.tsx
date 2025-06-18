@@ -47,7 +47,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       uid: user.uid,
       email: user.email!,
       displayName,
-      photoURL: user.photoURL || undefined,
+      photoURL: user.photoURL ?? '',
       isOnline: true,
       lastSeen: new Date()
     };
@@ -80,8 +80,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         const userProfile: User = {
           uid: user.uid,
           email: user.email!,
-          displayName: user.displayName || 'Anonymous',
-          photoURL: user.photoURL || undefined,
+          displayName: user?.displayName ?? 'Anonymous',
+          photoURL: user?.photoURL ?? undefined,
           isOnline: true,
           lastSeen: new Date()
         };
